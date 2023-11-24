@@ -1,4 +1,4 @@
-import User from "../modules/user.modules.js";
+import User from "../modules/User.modules.js";
 import shortUrl from "../modules/ShortLink.modules.js"
 import jwt from 'jsonwebtoken';
 
