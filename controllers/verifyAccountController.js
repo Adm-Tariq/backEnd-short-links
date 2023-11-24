@@ -1,7 +1,7 @@
 import otpGenerator from "otp-generator"
 import sendEmail from "../utility/valid/sendEmail.js"
 import jwt from 'jsonwebtoken';
-import User from "../modules/user.modules.js";
+import User from "../modules/User.modules.js";
 import session from 'express-session';
 
 let OTP = ''
