@@ -41,8 +41,7 @@ const register = async (req, res) => {
 
     const hashPassword = await bcrypt.hash(password, 10)
     let createUser = await User.create({ firstName, lastName, email, password: hashPassword })
-    const token = "00"
-     token = await jwt.sign({ user_info: createUser._id }, process.env.JWT_TOKEN_KEY, { expiresIn: "1d" })
+    const token = await jwt.sign({ user_info: createUser._id }, process.env.JWT_TOKEN_KEY, { expiresIn: "1d" })
     const refreshToken = await jwt.sign({ user_info: createUser._id }, process.env.JWT_REFRESH_TOKEN_KEY, { expiresIn: "7d" })
 
     res.cookie("refreshToken", refreshToken, {
