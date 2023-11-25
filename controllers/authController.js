@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken"
 
-import User from "../modules/user.modules.js";
+import User from "../modules/User.modules.js";
 import emailValid from "../utility/valid/emailValid.js";
 import passwordValid from "../utility/valid/passwordValid.js";
 
