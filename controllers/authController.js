@@ -94,8 +94,8 @@ const login = async (req, res) => {
     const refreshToken = await jwt.sign({ user_info: findUser._id }, process.env.JWT_REFRESH_TOKEN_KEY, { expiresIn: "7d" })
 
     res.cookie("refreshToken", refreshToken, {
-        httpOnly: true,
-        secure: true,
+        httpOnly: false,
+        secure: false,
         sameSite: "None",
         maxAge: 1000 * 60 * 60 * 24 * 7,
     })
